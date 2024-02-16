@@ -2,11 +2,17 @@ import { fetchJSON } from '$utils/fetchJSON';
 import { floatStringToInteger } from '$utils/floatToInteger';
 import { initAlpine } from '$utils/webflowAlpine';
 
+window.addEventListener('alpine:init', function () {
+  alpineModules();
+});
+
 // import and initialize AlpineJS
-initAlpine();
+window.Webflow.push(() => {
+  initAlpine();
+});
 
 // Reactive data using AlpineJS modules
-window.addEventListener('alpine:init', function () {
+function alpineModules() {
   const SHARED_VALUE_STORE_NAME = 'sharedValue';
 
   // Shared data value store
@@ -326,4 +332,4 @@ window.addEventListener('alpine:init', function () {
       this.fetchData();
     },
   }));
-});
+}

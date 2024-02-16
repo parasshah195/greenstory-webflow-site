@@ -2,9 +2,19 @@ import { fetchJSON } from '$utils/fetchJSON';
 import { floatStringToInteger } from '$utils/floatToInteger';
 import { getProjectIDFromURL } from '$utils/getProjectIDFromURL';
 import { timestampToDate } from '$utils/timestampToDate';
+import { initAlpine } from '$utils/webflowAlpine';
+
+window.addEventListener('alpine:init', function () {
+  alpineModules();
+});
+
+// import and initialize AlpineJS
+window.Webflow.push(() => {
+  initAlpine();
+});
 
 // Reactive data using AlpineJS modules
-window.addEventListener('alpine:init', function () {
+function alpineModules() {
   // Registry module
   window.Alpine.data('carbonAccountingRegistry', () => ({
     retired: '0',
@@ -134,4 +144,4 @@ window.addEventListener('alpine:init', function () {
       this.fetchData();
     },
   }));
-});
+}
