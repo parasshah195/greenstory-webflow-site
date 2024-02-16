@@ -100,6 +100,11 @@ function alpineModules() {
         return;
       }
 
+      if (!data.result.length) {
+        this.areTransactionsAvailable = false;
+        return;
+      }
+
       try {
         if ('retiral' === this.type) {
           data.result.forEach((item) => {

@@ -200,6 +200,12 @@ function alpineModules() {
 
       try {
         const result = 'carbonPurchases' === this.registryType ? data : data.result;
+
+        if (!result.length) {
+          this.areTransactionsAvailable = false;
+          return;
+        }
+
         result.forEach((item) => {
           const transactionInfo = {
             id: item.id,
