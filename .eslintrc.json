@@ -1,0 +1,6 @@
+{ 
+  "extends": ["@finsweet"],
+  "rules": {
+    "no-console": "off"
+  } 
+}
