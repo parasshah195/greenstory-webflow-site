@@ -73,11 +73,15 @@ function init() {
 
 export function initAlpine() {
   window.Alpine = Alpine;
+
   if (!window.Webflow) {
     window.Webflow = [];
   }
+
   window.Webflow.push(() => {
     init();
     Alpine.start();
+
+    window.DEBUG('AlpineJS initialized');
   });
 }
