@@ -33,7 +33,7 @@ Note: The setup won't automatically clean up deleted files that already exist in
     ```
 
 #### Debugging
-We have an opt-in debugging setup that turns on logs in the console. The preference can be toggled via browser console, and is stored in browser localStorage.
+There is an opt-in debugging setup that turns on logs in the console. The preference can be toggled via browser console, and is stored in browser localStorage.
 
 - Add any console logs in the code using the `window.DEBUG` function. It's a `console.log` wrapper. There is also a `window.IS_DEBUG_MODE` variable to run conditions on
 - Execute `window.setDebugMode(true)` in the console to turn on Debug mode. After reload, the console will start showing code logs.
@@ -42,6 +42,8 @@ We have an opt-in debugging setup that turns on logs in the console. The prefere
 ### Production
 1. Run `pnpm build` to generate the production files in `./dist` folder
 2. To push code to production, tag a version (follow [semver](https://semver.org/)) and push to GitHub. Once pushed, the production code will be auto loaded from [jsDelivr CDN](https://www.jsdelivr.net/).
+
+[JSDelivr CDN Purge URL](https://www.jsdelivr.com/tools/purge)
 
 #### jsDelivr Notes & Caveats
 - Direct jsDelivr links directly use semver tagged releases when available, else falls back to the master branch [[info discussion link](https://github.com/jsdelivr/jsdelivr/issues/18376#issuecomment-1046876129)]
