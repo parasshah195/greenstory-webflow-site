@@ -1,5 +1,5 @@
 import { fetchJSON } from '$utils/fetchJSON';
-import { floatStringToInteger } from '$utils/floatToInteger';
+import { floatStringToInteger } from '$utils/floatStringToInteger';
 import { getProjectIDFromURL } from '$utils/getProjectIDFromURL';
 import { timestampToDate } from '$utils/timestampToDate';
 import { initAlpine } from '$utils/webflowAlpine';

@@ -1,5 +1,6 @@
 import { fetchJSON } from '$utils/fetchJSON';
-import { floatStringToInteger } from '$utils/floatToInteger';
+import { floatStringToInteger } from '$utils/floatStringToInteger';
+import { floatToInteger } from '$utils/floatToInteger';
 import { initAlpine } from '$utils/webflowAlpine';
 
 window.addEventListener('alpine:init', function () {
@@ -113,7 +114,6 @@ function alpineModules() {
 
     async init() {
       let issuedCount = 0;
-      let retiredCount = 0;
       let issuedStatQuery;
 
       try {
@@ -136,7 +136,7 @@ function alpineModules() {
         }
       }
 
-      this.issued = floatStringToInteger(issuedCount);
+      this.issued = floatToInteger(issuedCount);
     },
   }));
 
