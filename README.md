@@ -1,5 +1,5 @@
-# Deck Docs Webflow Site
-This GitHub project provides a development workflow for JavaScript files in Deck Docs Webflow site. In essence, it uses esbuild to start a development server on [localhost:3000](http://localhost:3000) to build and serve any working file. However, once pushed up and merged into a version tagged branch, the production code will be loaded from [jsDelivr CDN](https://www.jsdelivr.com/). 
+# Green Story Webflow Site
+This GitHub project provides a development workflow for JavaScript files in Green Story Webflow site. In essence, it uses esbuild to start a development server on [localhost:3000](http://localhost:3000) to build and serve any working file. However, once pushed up and merged into a version tagged branch, the production code will be loaded from [jsDelivr CDN](https://www.jsdelivr.com/). 
 
 ## Install
 ### Prerequisites
